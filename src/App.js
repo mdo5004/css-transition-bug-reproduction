@@ -92,10 +92,11 @@ function App() {
               appearActive: classes.appearActive,
               appearDone: classes.appearDone,
             }}
-            in={!!text}
+            in={!!items[index]}
           >
             <div>
               <input value={text || ''} onChange={setText(index)} placeholder='You should only ever see one of these' />
+              <span>in should = {`${!!items[index]}`}</span>
             </div>
           </CSSTransition>
         })}
